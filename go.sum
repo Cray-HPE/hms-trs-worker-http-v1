@@ -195,6 +195,8 @@ github.com/frankban/quicktest v1.4.1/go.mod h1:36zfPVQyHxymz4cH7wlDmVwDrJuljRB60
 github.com/frankban/quicktest v1.7.2 h1:2QxQoC1TS09S7fhCPsrvqYdvP1H5M1P1ih5ABm3BTYk=
 github.com/frankban/quicktest v1.7.2/go.mod h1:jaStnuzAqU1AJdCO0l53JDCJrVDKcS03DbaAcR7Ks/o=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
+github.com/fsnotify/fsnotify v1.4.9 h1:hsms1Qyu0jgnwNXIxa+/V/PDsU6CfLf6CNO8H7IWoS4=
+github.com/fsnotify/fsnotify v1.4.9/go.mod h1:znqG4EE+3YCdAaPaxE2ZRY/06pZUdp0tY4IgpuI1SZQ=
 github.com/fsouza/fake-gcs-server v1.7.0/go.mod h1:5XIRs4YvwNbNoz+1JF8j6KLAyDh7RHGAyAK3EP2EsNk=
 github.com/garyburd/redigo v1.6.0/go.mod h1:NR3MbYisc3/PwhQ00EMzDiPmrwpPxAn5GI05/YaO1SY=
 github.com/ghodss/yaml v0.0.0-20150909031657-73d445a93680/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
@@ -344,11 +346,13 @@ github.com/grpc-ecosystem/grpc-gateway v1.9.4/go.mod h1:vNeuVxBJEsws4ogUvrchl83t
 github.com/grpc-ecosystem/grpc-health-probe v0.2.1-0.20181220223928-2bf0a5b182db/go.mod h1:uBKkC2RbarFsvS5jMJHpVhTLvGlGQj9JJwkaePE3FWI=
 github.com/hailocab/go-hostpool v0.0.0-20160125115350-e80d13ce29ed/go.mod h1:tMWxXQ9wFIaZeTI9F+hmhFiGpFmhOHzyShyFUhRm0H4=
 github.com/hashicorp/errwrap v1.0.0/go.mod h1:YH+1FKiLXxHSkmPseP+kNlulaMuP3n2brvKWEqk/Jc4=
+github.com/hashicorp/go-cleanhttp v0.5.0/go.mod h1:JpRdi6/HCYpAwUzNwuwqhbovhLtngrth3wmdIIUrZ80=
 github.com/hashicorp/go-cleanhttp v0.5.1 h1:dH3aiDG9Jvb5r5+bYHsikaOUIpcM0xvgMXVoDkXMzJM=
 github.com/hashicorp/go-cleanhttp v0.5.1/go.mod h1:JpRdi6/HCYpAwUzNwuwqhbovhLtngrth3wmdIIUrZ80=
 github.com/hashicorp/go-hclog v0.9.2 h1:CG6TE5H9/JXsFWJCfoIVpKFIkFe6ysEuHirp4DxCsHI=
 github.com/hashicorp/go-hclog v0.9.2/go.mod h1:5CU+agLiy3J7N7QjHK5d05KxGsuXiQLrjA0H7acj2lQ=
 github.com/hashicorp/go-multierror v1.0.0/go.mod h1:dHtQlpGsu+cZNNAkkCN/P3hoUDHhCYQXV3UM06sGGrk=
+github.com/hashicorp/go-retryablehttp v0.5.4/go.mod h1:9B5zBasrRhHXnJnui7y6sL7es7NDiJgTc6Er0maI1Xs=
 github.com/hashicorp/go-retryablehttp v0.6.4 h1:BbgctKO892xEyOXnGiaAwIoSq1QZ/SS4AhjoAh9DnfY=
 github.com/hashicorp/go-retryablehttp v0.6.4/go.mod h1:vAew36LZh98gCBJNLH42IQ1ER/9wtLZZ8meHqQvEYWY=
 github.com/hashicorp/go-syslog v1.0.0/go.mod h1:qPfqrKkXGihmCqbJM2mZgkZGvKG1dFdvsLplgctolz4=
@@ -405,6 +409,7 @@ github.com/klauspost/compress v1.9.8 h1:VMAMUUOh+gaxKTMk+zqbjsSjsIcUcL/LF4o63i82
 github.com/klauspost/compress v1.9.8/go.mod h1:RyIbtBH6LamlWaDj8nUwkbUhJ87Yi3uG0guNDohfE1A=
 github.com/klauspost/cpuid v1.2.0/go.mod h1:Pj4uuM528wm8OyEC2QMXAi2YiTZ96dNQPGgoMS4s3ek=
 github.com/klauspost/cpuid v1.2.2/go.mod h1:Pj4uuM528wm8OyEC2QMXAi2YiTZ96dNQPGgoMS4s3ek=
+github.com/klauspost/cpuid v1.3.1/go.mod h1:bYW4mA6ZgKPob1/Dlai2LviZJO7KGI3uoWLd42rAQw4=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1 h1:mweAR1A6xJ3oS2pRaGiHgQ4OO8tzTaLawm8vnODuwDk=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.2 h1:DB17ag19krx9CFsz4o3enTrPXyIXCl+2iCXH/aMAp9s=
@@ -504,7 +509,7 @@ github.com/opencontainers/runc v0.1.1/go.mod h1:qT5XzbpPznkRYVz/mWwUaVBUv2rmF59P
 github.com/opencontainers/runc v1.0.0-rc2.0.20190611121236-6cc515888830/go.mod h1:qT5XzbpPznkRYVz/mWwUaVBUv2rmF59PVA73FjuZG0U=
 github.com/opencontainers/runtime-spec v1.0.0/go.mod h1:jwyrGlmzljRJv/Fgzds9SsS/C5hL+LL3ko9hs6T5lQ0=
 github.com/opencontainers/selinux v1.2.2/go.mod h1:+BLncwf63G4dgOzykXAxcmnFlUaOlkDdmw/CqsW6pjs=
-github.com/openshift/api v3.9.1-0.20190924102528-32369d4db2ad+incompatible/go.mod h1:dh9o4Fs58gpFXGSYfnVxGR9PnV53I8TW84pQaJDdGiY=
+github.com/openshift/api v0.0.0-20190924102528-32369d4db2ad/go.mod h1:dh9o4Fs58gpFXGSYfnVxGR9PnV53I8TW84pQaJDdGiY=
 github.com/openshift/client-go v0.0.0-20190923180330-3b6373338c9b/go.mod h1:6rzn+JTr7+WYS2E1TExP4gByoABxMznR6y2SnUIkmxk=
 github.com/openshift/origin v0.0.0-20160503220234-8f127d736703/go.mod h1:0Rox5r9C8aQn6j1oAOQ0c1uC86mYbUFObzjBRvUKHII=
 github.com/openshift/prom-label-proxy v0.1.1-0.20191016113035-b8153a7f39f1/go.mod h1:p5MuxzsYP1JPsNGwtjtcgRHHlGziCJJfztff91nNixw=
@@ -762,6 +767,7 @@ golang.org/x/sys v0.0.0-20190515120540-06a5c4944438/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20190616124812-15dcb6c0061f/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20190626221950-04f50cda93cb/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20190801041406-cbf593c0f2f3/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20191005200804-aed5e4c7ecf9/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20191010194322-b09406accb47/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20191028164358-195ce5e7f934 h1:u/E0NqCIWRDAo9WCFo6Ko49njPFDLSd3z+X1HgWDMpE=
 golang.org/x/sys v0.0.0-20191028164358-195ce5e7f934/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
@@ -934,10 +940,12 @@ sigs.k8s.io/structured-merge-diff v0.0.0-20190525122527-15d366b2352e/go.mod h1:w
 sigs.k8s.io/structured-merge-diff v0.0.0-20190817042607-6149e4549fca/go.mod h1:IIgPezJWb76P0hotTxzDbWsMYB8APh18qZnxkomBpxA=
 sigs.k8s.io/testing_frameworks v0.1.2/go.mod h1:ToQrwSC3s8Xf/lADdZp3Mktcql9CG0UAmdJG9th5i0w=
 sigs.k8s.io/yaml v1.1.0/go.mod h1:UJmg0vDUVViEyp3mgSv9WPwZCDxu4rQW1olrI1uml+o=
-stash.us.cray.com/HMS/hms-trs-app-api v1.3.4 h1:eSdnQ6iSpeDEOI+mk7I8HFkTM2TRiTWCwDoN4sUC+qE=
-stash.us.cray.com/HMS/hms-trs-app-api v1.3.4/go.mod h1:7exfR7UESe1s8y51P+hKl3vGGXISslvqoM8fkPtEjE0=
-stash.us.cray.com/HMS/hms-trs-kafkalib v1.2.2 h1:ZfplFO9LF1uH/XvnFEV11MDE+qy2lT2aLpTpbUKBmLQ=
-stash.us.cray.com/HMS/hms-trs-kafkalib v1.2.2/go.mod h1:mRVX41+rV1PqToi6tPJp52OvseeAUoCrwU4qo1Fauy4=
-stash.us.cray.com/HMS/hms-trs-operator v1.2.4 h1:NpeCVeO0Z381ogzdjttIKgj+9JZWnSmfQQ5jYMLseU0=
-stash.us.cray.com/HMS/hms-trs-operator v1.2.4/go.mod h1:3g+WQIpSnM2muCtWPyVV3tk5E+6czACdgLiHuZyrd38=
+stash.us.cray.com/HMS/hms-base v1.11.1 h1:PKAA2vVxmfRk4AnIkQ8+Y4zdDpJPIfsu41xLDDb3mR4=
+stash.us.cray.com/HMS/hms-base v1.11.1/go.mod h1:2bT2ZeXBgXsrIsAtw0P6ILlTNilgOzzpJ/1NV545Tl0=
+stash.us.cray.com/HMS/hms-trs-app-api v1.5.0 h1:OJ/Bh0RAU6PBqcTyvZo1hJwZuIDA2i7jcrRJlhH24IM=
+stash.us.cray.com/HMS/hms-trs-app-api v1.5.0/go.mod h1:qRMxlcrfh/gnkqzzjlzLHHBqOsdHwJxkUnm0E/m50d0=
+stash.us.cray.com/HMS/hms-trs-kafkalib v1.4.0 h1:9rOfEbKr62dO5SS1nxFm6YTgp79z3O/UAnhW9+Uh9CM=
+stash.us.cray.com/HMS/hms-trs-kafkalib v1.4.0/go.mod h1:mRVX41+rV1PqToi6tPJp52OvseeAUoCrwU4qo1Fauy4=
+stash.us.cray.com/HMS/hms-trs-operator v1.4.0 h1:CaXT0MPw7PWZiPEAEONXdNOglTtmNHOblERIX5m9rMk=
+stash.us.cray.com/HMS/hms-trs-operator v1.4.0/go.mod h1:bSbkA36u3m21u74HEKgj44jDcR4RbV/8tGGU8V8dMMg=
 vbom.ml/util v0.0.0-20160121211510-db5cfe13f5cc/go.mod h1:so/NYdZXCz+E3ZpW0uAoCj6uzU2+8OWDFv/HxUSs7kI=

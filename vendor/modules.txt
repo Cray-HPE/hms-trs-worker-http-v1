@@ -8,6 +8,8 @@ github.com/eapache/go-resiliency/breaker
 github.com/eapache/go-xerial-snappy
 # github.com/eapache/queue v1.1.0
 github.com/eapache/queue
+# github.com/fsnotify/fsnotify v1.4.9
+github.com/fsnotify/fsnotify
 # github.com/golang/snappy v0.0.1
 github.com/golang/snappy
 # github.com/google/uuid v1.1.1
@@ -82,9 +84,11 @@ gopkg.in/jcmturner/gokrb5.v7/types
 # gopkg.in/jcmturner/rpc.v1 v1.1.0
 gopkg.in/jcmturner/rpc.v1/mstypes
 gopkg.in/jcmturner/rpc.v1/ndr
-# stash.us.cray.com/HMS/hms-trs-app-api v1.3.4
+# stash.us.cray.com/HMS/hms-base v1.11.1
+stash.us.cray.com/HMS/hms-base
+# stash.us.cray.com/HMS/hms-trs-app-api v1.5.0
 stash.us.cray.com/HMS/hms-trs-app-api/pkg/trs_http_api
-# stash.us.cray.com/HMS/hms-trs-kafkalib v1.2.2
+# stash.us.cray.com/HMS/hms-trs-kafkalib v1.4.0
 stash.us.cray.com/HMS/hms-trs-kafkalib/pkg/trs-kafkalib
-# stash.us.cray.com/HMS/hms-trs-operator v1.2.4
+# stash.us.cray.com/HMS/hms-trs-operator v1.4.0
 stash.us.cray.com/HMS/hms-trs-operator/pkg/kafka_topics
