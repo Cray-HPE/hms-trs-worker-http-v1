@@ -5,9 +5,9 @@ go 1.13
 require (
 	github.com/Shopify/sarama v1.26.1
 	github.com/sirupsen/logrus v1.5.0
-	stash.us.cray.com/HMS/hms-trs-app-api v1.3.4
-	stash.us.cray.com/HMS/hms-trs-kafkalib v1.2.2
-	stash.us.cray.com/HMS/hms-trs-operator v1.2.4
+	stash.us.cray.com/HMS/hms-trs-app-api v1.5.0
+	stash.us.cray.com/HMS/hms-trs-kafkalib v1.4.0
+	stash.us.cray.com/HMS/hms-trs-operator v1.4.0
 )
 
 // Pinned to kubernetes-1.16.2, needed to run 'go get -d stash.us.cray.com/HMS/hms-trs-operator' successfully
@@ -36,3 +36,5 @@ replace (
 )
 
 replace github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309 // Required by Helm
+
+replace github.com/openshift/api => github.com/openshift/api v0.0.0-20190924102528-32369d4db2ad // Required until https://github.com/operator-framework/operator-lifecycle-manager/pull/1241 is resolved
