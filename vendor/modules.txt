@@ -90,5 +90,5 @@ stash.us.cray.com/HMS/hms-base
 stash.us.cray.com/HMS/hms-trs-app-api/pkg/trs_http_api
 # stash.us.cray.com/HMS/hms-trs-kafkalib v1.4.0
 stash.us.cray.com/HMS/hms-trs-kafkalib/pkg/trs-kafkalib
-# stash.us.cray.com/HMS/hms-trs-operator v1.4.0
+# stash.us.cray.com/HMS/hms-trs-operator v1.4.1
 stash.us.cray.com/HMS/hms-trs-operator/pkg/kafka_topics

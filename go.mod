@@ -7,7 +7,7 @@ require (
 	github.com/sirupsen/logrus v1.5.0
 	stash.us.cray.com/HMS/hms-trs-app-api v1.5.0
 	stash.us.cray.com/HMS/hms-trs-kafkalib v1.4.0
-	stash.us.cray.com/HMS/hms-trs-operator v1.4.0
+	stash.us.cray.com/HMS/hms-trs-operator v1.4.1
 )
 
 // Pinned to kubernetes-1.16.2, needed to run 'go get -d stash.us.cray.com/HMS/hms-trs-operator' successfully
