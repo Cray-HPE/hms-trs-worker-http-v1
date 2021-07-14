@@ -22,13 +22,15 @@
 
 # Dockerfile for building HMS TRS Worker.
 
-FROM arti.dev.cray.com/baseos-docker-master-local/golang:1.14-alpine3.12 AS build-base
+FROM arti.dev.cray.com/baseos-docker-master-local/golang:1.16-alpine3.13 AS build-base
 
 RUN set -ex \
     && apk update \
     && apk add build-base
 
 FROM build-base AS base
+
+RUN go env -w GO111MODULE=auto
 
 # Copy all the necessary files to the image.
 COPY cmd $GOPATH/src/stash.us.cray.com/HMS/hms-trs-worker/cmd
@@ -44,8 +46,8 @@ RUN set -ex \
 
 ### Final Stage ###
 
-FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.12
-LABEL maintainer="Cray, Inc."
+FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.13
+LABEL maintainer="Hewlett Packard Enterprise"
 STOPSIGNAL SIGTERM
 EXPOSE 8376
 
