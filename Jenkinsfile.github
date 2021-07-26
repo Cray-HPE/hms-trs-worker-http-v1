@@ -1,0 +1,42 @@
+@Library('csm-shared-library') _
+
+pipeline {
+    agent {
+        label "metal-gcp-builder"
+    }
+
+    options {
+        buildDiscarder(logRotator(numToKeepStr: "10"))
+        timestamps()
+    }
+
+    environment {
+        NAME = "hms-trs-worker-http-v1"
+        DESCRIPTION = "Cray HMS TRS HTTPv1 worker."
+        IS_STABLE = getBuildIsStable()
+        VERSION = getDockerBuildVersion(isStable: env.IS_STABLE)
+        DOCKER_ARGS = getDockerBuildArgs(name: env.NAME, description: env.DESCRIPTION, version: env.VERSION)
+    }
+
+    stages {
+        stage("Image") {
+            steps {
+                sh "make image"
+            }
+        }
+
+        stage("Integration") {
+            steps {
+                sh "make integration"
+            }
+        }
+
+        stage("Publish") {
+            steps {
+                script {
+                    publishCsmDockerImage(image: env.NAME, tag: env.VERSION, isStable: env.IS_STABLE)
+                }
+            }
+        }
+    }
+}
