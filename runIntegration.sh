@@ -37,7 +37,7 @@ RANDY=$(echo $RANDOM | ${md5_exe} | awk '{print $1}')
 CURWD=$(pwd)
 REPO_DIR=$CURWD/repos
 REPOS=(
-    hms/hms-trs-app-api
+    hms-trs-app-api
 )
 
 CURBRANCH=$(git branch | grep \* | cut -d ' ' -f2)
