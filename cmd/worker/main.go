@@ -32,12 +32,12 @@ import (
 	"io/ioutil"
 	"os"
 	"os/signal"
-	trsapi "stash.us.cray.com/HMS/hms-trs-app-api/pkg/trs_http_api"
-	tkafka "stash.us.cray.com/HMS/hms-trs-kafkalib/pkg/trs-kafkalib"
+	trsapi "github.com/Cray-HPE/hms-trs-app-api/pkg/trs_http_api"
+	tkafka "github.com/Cray-HPE/hms-trs-kafkalib/pkg/trs-kafkalib"
 	"strings"
 	"time"
 
-	topics "stash.us.cray.com/HMS/hms-trs-operator/pkg/kafka_topics"
+	topics "github.com/Cray-HPE/hms-trs-operator/pkg/kafka_topics"
 	"sync"
 	"syscall"
 )

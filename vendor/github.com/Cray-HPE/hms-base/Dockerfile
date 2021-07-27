@@ -1,6 +1,6 @@
 # MIT License
 #
-# (C) Copyright [2020-2021] Hewlett Packard Enterprise Development LP
+# (C) Copyright [2019-2021] Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -20,48 +20,26 @@
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 
-# Dockerfile for testing HMS TRS Worker.
+# Dockerfile for building HMS base. Note that this image
+# can't be run as these are just packages in this repo.
 
-FROM arti.dev.cray.com/baseos-docker-master-local/golang:1.14-alpine3.12 AS build-base
+# Build base just has the packages installed we need.
+FROM arti.dev.cray.com/baseos-docker-master-local/golang:1.16-alpine3.13 AS build-base
 
 RUN set -ex \
     && apk update \
     && apk add build-base
 
+# Copy the files in for the next stages to use.
 FROM build-base AS base
 
-# Copy all the necessary files to the image.
-COPY cmd $GOPATH/src/github.com/Cray-HPE/hms-trs-worker/cmd
-COPY vendor $GOPATH/src/github.com/Cray-HPE/hms-trs-worker/vendor
+RUN go env -w GO111MODULE=auto
 
-### Build Stage ###
+COPY *.go $GOPATH/src/github.com/Cray-HPE/hms-base/
+COPY vendor $GOPATH/src/github.com/Cray-HPE/hms-base/vendor
 
-FROM base AS builder
-
-# Now build
-RUN set -ex \
-    && go build -v -i -o worker github.com/Cray-HPE/hms-trs-worker/cmd/worker
-
-### Final Stage ###
-
-FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.12
-LABEL maintainer="Cray, Inc."
-STOPSIGNAL SIGTERM
-EXPOSE 8376
-
-# Setup environment variables.
-ENV LOG_LEVEL="INFO"
-ENV BROKER_SPEC="kafka:9092"
-ENV TOPICS_FILE="/configs/active_topics.json"
+# Now we can build.
+FROM base
 
 RUN set -ex \
-    && apk update \
-    && apk add --no-cache curl
-
-# Get worker from the builder stage.
-COPY --from=builder /go/worker /usr/local/bin
-COPY test /configs/
-COPY .version /
-
-# Set up the command to start the service, the run the init script.
-CMD worker
+    && go build -v github.com/Cray-HPE/hms-base/...
