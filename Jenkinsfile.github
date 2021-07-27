@@ -27,7 +27,9 @@ pipeline {
 
         stage("Integration") {
             steps {
-                sh "make integration"
+                sshagent(credentials: ["jenkins-hms-readonly"]) {
+                    sh "make integration"
+                }
             }
         }
 

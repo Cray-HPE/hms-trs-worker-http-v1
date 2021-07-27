@@ -143,7 +143,7 @@ fi
 echo "Checking out all repos"
 for repo in ${REPOS[@]}; do
     echo "Cloning $repo into $REPO_DIR/$repo"
-    git clone --depth 1 --no-single-branch https://github.com/Cray-HPE/"$repo".git "${REPO_DIR}"/"${repo}"
+    git clone --depth 1 --no-single-branch git@github.com:Cray-HPE/"$repo".git "${REPO_DIR}"/"${repo}"
 
 done
 
