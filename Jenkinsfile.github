@@ -27,7 +27,7 @@ pipeline {
 
         stage("Integration") {
             steps {
-                sshagent(credentials: ["jenkins-hms-readonly"]) {
+                sshagent(credentials: ["deploykey-readonly-hms-trs-app-api"]) {
                     sh "make integration"
                 }
             }
