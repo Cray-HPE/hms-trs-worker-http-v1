@@ -36,7 +36,7 @@ services:
       - kafka
   integration:
     build:
-      context: repos/hms/hms-trs-app-api
+      context: repos/hms-trs-app-api
       dockerfile: Dockerfile.integration
     hostname: integration
     environment:
