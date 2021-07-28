@@ -25,6 +25,14 @@ github.com/Azure/go-autorest/tracing v0.6.0/go.mod h1:+vhtPC754Xsa23ID7GlGsrdKBp
 github.com/BurntSushi/toml v0.3.0/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
+github.com/Cray-HPE/hms-base v1.15.0 h1:VaQj6cY9OAs6rcD1miE133eqQnRTkEcX1lnwJA/SUuU=
+github.com/Cray-HPE/hms-base v1.15.0/go.mod h1:+G8KFLPtanLC5lQ602hrf3MDfLTmIXedTavVCOdz5XA=
+github.com/Cray-HPE/hms-trs-app-api v1.6.2 h1:yzf2E+8QM0+S7AFc47JIyu4yTLM/HKvY1BHtdGSEXFY=
+github.com/Cray-HPE/hms-trs-app-api v1.6.2/go.mod h1:RbB2pYCrZ5N3d0ho4nzTAz9ifI2GYpAdf4Qeco748KQ=
+github.com/Cray-HPE/hms-trs-kafkalib v1.5.2 h1:MhV6SE0HmEcMnuAb/dVclfXd+49udbVCYr2ze0CDXoI=
+github.com/Cray-HPE/hms-trs-kafkalib v1.5.2/go.mod h1:jo5bCP12PYVHeyaSa9okvz36pgwwY1czjZzUi96Ryjg=
+github.com/Cray-HPE/hms-trs-operator v1.6.3 h1:ik148sOhQ5F8vneJUfvQJMvQ7BdlYGh2CSp3ZjzrLrE=
+github.com/Cray-HPE/hms-trs-operator v1.6.3/go.mod h1:Qyj4mSVn5EDBWdsXWmzDLCfM/vX1dzFKO4FCYnBZuRo=
 github.com/DATA-DOG/go-sqlmock v1.3.3/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
 github.com/GoogleCloudPlatform/k8s-cloud-provider v0.0.0-20190822182118-27a4ced34534/go.mod h1:iroGtC8B3tQiqtds1l+mgk/BBOrxbqjH+eUfFQYRc14=
 github.com/JeffAshton/win_pdh v0.0.0-20161109143554-76bb4ee9f0ab/go.mod h1:3VYc5hodBMJ5+l/7J4xAyMeuM2PNuepvHlGs8yilUCA=
@@ -409,7 +417,6 @@ github.com/klauspost/compress v1.9.8 h1:VMAMUUOh+gaxKTMk+zqbjsSjsIcUcL/LF4o63i82
 github.com/klauspost/compress v1.9.8/go.mod h1:RyIbtBH6LamlWaDj8nUwkbUhJ87Yi3uG0guNDohfE1A=
 github.com/klauspost/cpuid v1.2.0/go.mod h1:Pj4uuM528wm8OyEC2QMXAi2YiTZ96dNQPGgoMS4s3ek=
 github.com/klauspost/cpuid v1.2.2/go.mod h1:Pj4uuM528wm8OyEC2QMXAi2YiTZ96dNQPGgoMS4s3ek=
-github.com/klauspost/cpuid v1.3.1/go.mod h1:bYW4mA6ZgKPob1/Dlai2LviZJO7KGI3uoWLd42rAQw4=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.2 h1:DB17ag19krx9CFsz4o3enTrPXyIXCl+2iCXH/aMAp9s=
 github.com/konsorten/go-windows-terminal-sequences v1.0.2/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
@@ -936,14 +943,4 @@ sigs.k8s.io/structured-merge-diff v0.0.0-20190525122527-15d366b2352e/go.mod h1:w
 sigs.k8s.io/structured-merge-diff v0.0.0-20190817042607-6149e4549fca/go.mod h1:IIgPezJWb76P0hotTxzDbWsMYB8APh18qZnxkomBpxA=
 sigs.k8s.io/testing_frameworks v0.1.2/go.mod h1:ToQrwSC3s8Xf/lADdZp3Mktcql9CG0UAmdJG9th5i0w=
 sigs.k8s.io/yaml v1.1.0/go.mod h1:UJmg0vDUVViEyp3mgSv9WPwZCDxu4rQW1olrI1uml+o=
-stash.us.cray.com/HMS/hms-base v1.11.1/go.mod h1:2bT2ZeXBgXsrIsAtw0P6ILlTNilgOzzpJ/1NV545Tl0=
-stash.us.cray.com/HMS/hms-base v1.13.0 h1:S2KodHGI0+PFOw7yQ5TxbFTNTO5aRkdRy8W78kQHVdw=
-stash.us.cray.com/HMS/hms-base v1.13.0/go.mod h1:NT3V4GI750dm2tQzBkGZiFmJIpR8cerIcP8KWcYYuUY=
-stash.us.cray.com/HMS/hms-trs-app-api v1.6.0 h1:gH0aAZ6AHPWwxuysb/th8zAggaoo7cRuAEpX/Y8FF6s=
-stash.us.cray.com/HMS/hms-trs-app-api v1.6.0/go.mod h1:HFzdvdJTlrzf3mwJiDRt6uSiwsputw+d7bQZc/fo9sI=
-stash.us.cray.com/HMS/hms-trs-kafkalib v1.4.0/go.mod h1:mRVX41+rV1PqToi6tPJp52OvseeAUoCrwU4qo1Fauy4=
-stash.us.cray.com/HMS/hms-trs-kafkalib v1.5.0 h1:ZQaj2WqFDPLZWmg9Fyia/b/ixMB/nb3lKK5ogJZD0vI=
-stash.us.cray.com/HMS/hms-trs-kafkalib v1.5.0/go.mod h1:zJtT+luyQKd24K6gCfl/311E88A8BBgxd/MfwfvXfVU=
-stash.us.cray.com/HMS/hms-trs-operator v1.6.1 h1:J5gr4hm1EY0AMcG2eCip5xxhVR7XIv7kSoznTAjPsys=
-stash.us.cray.com/HMS/hms-trs-operator v1.6.1/go.mod h1:tyR7dk0Ow2OfqnKOGMOtxT0/LfUmH3cUavVHhVCc3zo=
 vbom.ml/util v0.0.0-20160121211510-db5cfe13f5cc/go.mod h1:so/NYdZXCz+E3ZpW0uAoCj6uzU2+8OWDFv/HxUSs7kI=
