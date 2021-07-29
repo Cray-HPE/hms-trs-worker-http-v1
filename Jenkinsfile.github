@@ -30,6 +30,7 @@ pipeline {
                 withCredentials([gitUsernamePassword(credentialsId: 'jenkins-algol60-cray-hpe-github-integration')]) {
                     sh "make integration"
                 }
+                sh "make integration"
             }
         }
 
