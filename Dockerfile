@@ -25,7 +25,7 @@
 FROM arti.dev.cray.com/baseos-docker-master-local/golang:1.16-alpine3.13 AS build-base
 
 RUN set -ex \
-    && apk update \
+    && apk -U upgrade \
     && apk add build-base
 
 FROM build-base AS base
@@ -58,7 +58,7 @@ ENV BROKER_SPEC="kafka:9092"
 ENV TOPICS_FILE="configs/active_topics.json"
 
 RUN set -ex \
-    && apk update \
+    && apk -U upgrade \
     && apk add --no-cache curl
 
 # Get worker from the builder stage.
