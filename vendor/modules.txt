@@ -7,6 +7,7 @@ github.com/Cray-HPE/hms-trs-kafkalib/pkg/trs-kafkalib
 # github.com/Cray-HPE/hms-trs-operator v1.6.3
 github.com/Cray-HPE/hms-trs-operator/pkg/kafka_topics
 # github.com/Shopify/sarama v1.26.1
+## explicit
 github.com/Shopify/sarama
 # github.com/davecgh/go-spew v1.1.1
 github.com/davecgh/go-spew/spew
@@ -45,6 +46,7 @@ github.com/pierrec/lz4/internal/xxh32
 # github.com/rcrowley/go-metrics v0.0.0-20190826022208-cac0b30c2563
 github.com/rcrowley/go-metrics
 # github.com/sirupsen/logrus v1.5.0
+## explicit
 github.com/sirupsen/logrus
 # golang.org/x/crypto v0.0.0-20201002170205-7f63de1d35b0
 golang.org/x/crypto/md4
