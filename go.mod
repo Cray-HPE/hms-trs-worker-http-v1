@@ -1,6 +1,6 @@
 module github.com/Cray-HPE/hms-trs-worker
 
-go 1.13
+go 1.16
 
 require (
 	github.com/Cray-HPE/hms-trs-app-api v1.6.2
