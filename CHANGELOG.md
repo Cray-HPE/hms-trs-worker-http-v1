@@ -5,13 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.4] - 2021-07-26
+## [1.3.5] - 2021-09-01
 
 ### Changed
 
+- CASMHMS-5067 - Pull in commit history that was lost when migrating from Stash to Github.
+
+### Security
+
+- CASMHMS-4898 - Updated base container images for security updates.
+- cleaned up dockerfiles, added .github files
 - Conversion for github
     - Added Makefile
     - Added Jenkinsfile.github
+
 
 ## [1.3.3] - 2021-05-05
 

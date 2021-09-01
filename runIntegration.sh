@@ -37,7 +37,7 @@ RANDY=$(echo $RANDOM | ${md5_exe} | awk '{print $1}')
 CURWD=$(pwd)
 REPO_DIR=$CURWD/repos
 REPOS=(
-    hms/hms-trs-app-api
+    hms-trs-app-api
 )
 
 CURBRANCH=$(git branch | grep \* | cut -d ' ' -f2)
@@ -143,7 +143,7 @@ fi
 echo "Checking out all repos"
 for repo in ${REPOS[@]}; do
     echo "Cloning $repo into $REPO_DIR/$repo"
-    git clone --depth 1 --no-single-branch https://stash.us.cray.com/scm/"$repo".git "${REPO_DIR}"/"${repo}"
+    git clone --depth 1 --no-single-branch https://github.com/Cray-HPE/"$repo".git "${REPO_DIR}"/"${repo}"
 
 done
 
