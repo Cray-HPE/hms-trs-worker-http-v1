@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - CASMHMS-4898 - Updated base container images for security updates.
 - cleaned up dockerfiles, added .github files
+
+## [1.3.4] - 2021-07-26
+
+### Changed
+
 - Conversion for github
     - Added Makefile
     - Added Jenkinsfile.github
