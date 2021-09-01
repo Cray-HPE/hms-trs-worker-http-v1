@@ -22,17 +22,19 @@
 
 # Dockerfile for testing HMS TRS Worker.
 
-FROM arti.dev.cray.com/baseos-docker-master-local/golang:1.14-alpine3.12 AS build-base
+FROM arti.dev.cray.com/baseos-docker-master-local/golang:1.16-alpine3.13 AS build-base
 
 RUN set -ex \
-    && apk update \
+    && apk -U upgrade \
     && apk add build-base
 
 FROM build-base AS base
 
+RUN go env -w GO111MODULE=auto
+
 # Copy all the necessary files to the image.
-COPY cmd $GOPATH/src/stash.us.cray.com/HMS/hms-trs-worker/cmd
-COPY vendor $GOPATH/src/stash.us.cray.com/HMS/hms-trs-worker/vendor
+COPY cmd $GOPATH/src/github.com/Cray-HPE/hms-trs-worker/cmd
+COPY vendor $GOPATH/src/github.com/Cray-HPE/hms-trs-worker/vendor
 
 ### Build Stage ###
 
@@ -40,12 +42,12 @@ FROM base AS builder
 
 # Now build
 RUN set -ex \
-    && go build -v -i -o worker stash.us.cray.com/HMS/hms-trs-worker/cmd/worker
+    && go build -v -i -o worker github.com/Cray-HPE/hms-trs-worker/cmd/worker
 
 ### Final Stage ###
 
-FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.12
-LABEL maintainer="Cray, Inc."
+FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.13
+LABEL maintainer="Hewlett Packard Enterprise"
 STOPSIGNAL SIGTERM
 EXPOSE 8376
 
@@ -55,7 +57,7 @@ ENV BROKER_SPEC="kafka:9092"
 ENV TOPICS_FILE="/configs/active_topics.json"
 
 RUN set -ex \
-    && apk update \
+    && apk -U upgrade \
     && apk add --no-cache curl
 
 # Get worker from the builder stage.

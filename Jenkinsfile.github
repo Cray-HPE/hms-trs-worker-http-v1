@@ -27,7 +27,9 @@ pipeline {
 
         stage("Integration") {
             steps {
-                sh "make integration"
+                withCredentials([gitUsernamePassword(credentialsId: 'jenkins-algol60-cray-hpe-github-integration')]) {
+                    sh "make integration"
+                }
             }
         }
 
