@@ -177,7 +177,7 @@ cd $CURWD
 # Step 3) Get the base containers running
 echo "Starting containers..."
 ${docker_compose_exe} pull \
-    && ${docker_compose_exe} build --parallel \
+    && ${docker_compose_exe} build \
     && ${docker_compose_exe} up -d zookeeper kafka \
     && ${docker_compose_exe} up -d worker
 if [[ $? -ne 0 ]]; then

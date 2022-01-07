@@ -1,6 +1,6 @@
 // MIT License
 //
-// (C) Copyright [2020-2021] Hewlett Packard Enterprise Development LP
+// (C) Copyright [2020-2022] Hewlett Packard Enterprise Development LP
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the "Software"),
@@ -22,18 +22,22 @@
 
 package main
 
-// This is for manual testing only, not to be used in the library package.
+// This application is the work horse for TRS worker mode.  It listens on
+// Kafka for a package containing a set of HTTP operations, and then 
+// executes them using the same library as TRS local mode. The results are
+// packaged up and sent over Kafka back to the sender.
+
 
 import (
 	"context"
 	"encoding/json"
-	"github.com/Shopify/sarama"
+	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"github.com/sirupsen/logrus"
 	"io/ioutil"
 	"os"
 	"os/signal"
-	trsapi "github.com/Cray-HPE/hms-trs-app-api/pkg/trs_http_api"
-	tkafka "github.com/Cray-HPE/hms-trs-kafkalib/pkg/trs-kafkalib"
+	trsapi "github.com/Cray-HPE/hms-trs-app-api/v2/pkg/trs_http_api"
+	tkafka "github.com/Cray-HPE/hms-trs-kafkalib/v2/pkg/trs-kafkalib"
 	"strings"
 	"time"
 
@@ -48,7 +52,7 @@ type Worker struct {
 	svcName                     string
 	sender                      string
 	brokerSpec                  string
-	kafkaRspChan                chan *sarama.ConsumerMessage
+	kafkaRspChan                chan *kafka.Message
 	stopUpdateTopics            chan []byte
 	updateTopicsRefreshInterval int
 	kafkaInstance               *tkafka.TRSKafka
@@ -141,7 +145,7 @@ func main() {
 
 	wk.updateTopicsRefreshInterval = 5
 	wk.stopUpdateTopics = make(chan []byte)
-	wk.kafkaRspChan = make(chan *sarama.ConsumerMessage)
+	wk.kafkaRspChan = make(chan *kafka.Message)
 	wk.kafkaInstance = &tkafka.TRSKafka{}
 
 	//This makes the send topic / return topic global for the instance of the TRSHTTPRemote obj.

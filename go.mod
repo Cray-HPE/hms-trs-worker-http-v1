@@ -2,14 +2,6 @@ module github.com/Cray-HPE/hms-trs-worker
 
 go 1.16
 
-require (
-	github.com/Cray-HPE/hms-trs-app-api v1.6.2
-	github.com/Cray-HPE/hms-trs-kafkalib v1.5.2
-	github.com/Cray-HPE/hms-trs-operator v1.6.3
-	github.com/Shopify/sarama v1.26.1
-	github.com/sirupsen/logrus v1.5.0
-)
-
 // Pinned to kubernetes-1.16.2, needed to run 'go get -d github.com/Cray-HPE/hms-trs-operator' successfully
 replace (
 	k8s.io/api => k8s.io/api v0.0.0-20191016110408-35e52d86657a
@@ -38,3 +30,11 @@ replace (
 replace github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309 // Required by Helm
 
 replace github.com/openshift/api => github.com/openshift/api v0.0.0-20190924102528-32369d4db2ad // Required until https://github.com/operator-framework/operator-lifecycle-manager/pull/1241 is resolved
+
+require (
+	github.com/Cray-HPE/hms-trs-app-api/v2 v2.0.0
+	github.com/Cray-HPE/hms-trs-kafkalib/v2 v2.0.1
+	github.com/Cray-HPE/hms-trs-operator v1.7.0
+	github.com/confluentinc/confluent-kafka-go v1.8.2
+	github.com/sirupsen/logrus v1.8.1
+)

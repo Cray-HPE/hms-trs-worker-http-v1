@@ -1,6 +1,6 @@
 # MIT License
 #
-# (C) Copyright [2020-2021] Hewlett Packard Enterprise Development LP
+# (C) Copyright [2020-2022] Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -42,7 +42,7 @@ FROM base AS builder
 
 # Now build
 RUN set -ex \
-    && go build -v -i -o worker github.com/Cray-HPE/hms-trs-worker/cmd/worker
+    && go build -v -i -tags musl -o worker github.com/Cray-HPE/hms-trs-worker/cmd/worker
 
 ### Final Stage ###
 
