@@ -5,12 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.1] - 2022-04-27
+
+### Updated
+
+- updated runIntegration.sh to pull in version 1.6.2 of hms-trs-app-api instead of master
 
 ## [1.6.0] - 2021-10-29
 
 ### Changed
 
-- version bump to adhere to semver standard 
+- version bump to adhere to semver standard
 
 ## [1.5.4] - 2021-08-10
 
@@ -104,11 +109,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.1] - 2019-02-26
 
-- Updated usage of trs-app-api to be v1.1.4 to fix critical bugs. 
+- Updated usage of trs-app-api to be v1.1.4 to fix critical bugs.
 
 ## [1.0.0] - 2019-02-20
 
-- The first release is ready.  It accepts a location to check for updating topics, integration scripts work. 
+- The first release is ready.  It accepts a location to check for updating topics, integration scripts work.
 
 ### Added
 
@@ -121,4 +126,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
-
