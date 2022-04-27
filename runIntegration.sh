@@ -45,6 +45,7 @@ CURCOMMIT=$(git rev-parse --verify HEAD)
 
 BRANCH_HIERARCHY=(
     ${CURBRANCH}
+    v1.6.2
     develop
     master
 )
