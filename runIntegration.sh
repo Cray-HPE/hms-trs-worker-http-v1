@@ -1,7 +1,8 @@
 #!/bin/bash
+
 # MIT License
 #
-# (C) Copyright [2021] Hewlett Packard Enterprise Development LP
+# (C) Copyright [2021-2022] Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -96,28 +97,26 @@ echo "RANDY: ${RANDY}"
 echo "Current directory: $CURWD"
 echo "Current branch: $CURBRANCH"
 echo "Compose project name: $COMPOSE_PROJECT_NAME"
-echo "Keep repo dirirectory after cleanup: $KEEP_REPO_DIR"
+echo "Keep repo directory after cleanup: $KEEP_REPO_DIR"
 echo "Skip Cleanup: $NO_CLEAN"
 
-
 function cleanup {
-  if [[ ${NO_CLEAN} == false ]]; then
-    ${docker_compose_exe} down
-    if ! [[ $? -eq 0 ]]; then
-        echo "Failed to decompose environment!"
-        exit 1
-    fi
-
-    if [[ ${KEEP_REPO_DIR} == false ]]; then
-        echo "Cleaning up temporary repo dir..."
-        rm -rf ${REPO_DIR}
+    if [[ ${NO_CLEAN} == false ]]; then
+        ${docker_compose_exe} down
         if ! [[ $? -eq 0 ]]; then
-            echo "Failed to remove repo dir!"
+            echo "Failed to decompose environment!"
             exit 1
         fi
-    fi
-  fi
 
+        if [[ ${KEEP_REPO_DIR} == false ]]; then
+            echo "Cleaning up temporary repo dir..."
+            rm -rf ${REPO_DIR}
+            if ! [[ $? -eq 0 ]]; then
+                echo "Failed to remove repo dir!"
+                exit 1
+            fi
+        fi
+    fi
     exit $1
 }
 
@@ -159,10 +158,10 @@ for repo in ${REPOS[@]} ; do
         git checkout ${x}
         if [ $? -eq 0 ]
         then
-          echo "successfully checked out branch ${x}"
-          break
+            echo "successfully checked out branch ${x}"
+            break
         else
-          echo "could not find branch ${x}..." >&2
+            echo "could not find branch ${x}..." >&2
             if [ "${x}" == "master" ]; then
                 echo "all out of options... exiting"
                 exit 1

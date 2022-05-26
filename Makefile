@@ -1,4 +1,4 @@
-# (C) Copyright 2021 Hewlett Packard Enterprise Development LP
+# (C) Copyright [2021-2022] Hewlett Packard Enterprise Development LP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -18,14 +18,18 @@
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 
+# Service
 NAME ?= hms-trs-worker-http-v1
 VERSION ?= $(shell cat .version)
+DOCKER_IMAGE ?= ${NAME}:${VERSION}
 
-all: image integration
+all: image integration snyk
 
 image:
-	docker build --pull ${DOCKER_ARGS} --tag '${NAME}:${VERSION}' .
+	docker build --pull ${DOCKER_ARGS} --tag '${DOCKER_IMAGE}' .
 
 integration:
 	./runIntegration.sh
 
+snyk:
+	./runSnyk.sh
