@@ -34,7 +34,7 @@ replace github.com/openshift/api => github.com/openshift/api v0.0.0-201909241025
 require (
 	github.com/Cray-HPE/hms-trs-app-api/v2 v2.0.0
 	github.com/Cray-HPE/hms-trs-kafkalib/v2 v2.0.1
-	github.com/Cray-HPE/hms-trs-operator v1.7.0
+	github.com/Cray-HPE/hms-trs-operator/v2 v2.0.2
 	github.com/confluentinc/confluent-kafka-go v1.8.2
 	github.com/sirupsen/logrus v1.8.1
 )

@@ -23,27 +23,28 @@
 package main
 
 // This application is the work horse for TRS worker mode.  It listens on
-// Kafka for a package containing a set of HTTP operations, and then 
+// Kafka for a package containing a set of HTTP operations, and then
 // executes them using the same library as TRS local mode. The results are
 // packaged up and sent over Kafka back to the sender.
-
 
 import (
 	"context"
 	"encoding/json"
-	"github.com/confluentinc/confluent-kafka-go/kafka"
-	"github.com/sirupsen/logrus"
 	"io/ioutil"
 	"os"
 	"os/signal"
-	trsapi "github.com/Cray-HPE/hms-trs-app-api/v2/pkg/trs_http_api"
-	tkafka "github.com/Cray-HPE/hms-trs-kafkalib/v2/pkg/trs-kafkalib"
 	"strings"
 	"time"
 
-	topics "github.com/Cray-HPE/hms-trs-operator/pkg/kafka_topics"
+	trsapi "github.com/Cray-HPE/hms-trs-app-api/v2/pkg/trs_http_api"
+	tkafka "github.com/Cray-HPE/hms-trs-kafkalib/v2/pkg/trs-kafkalib"
+	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"github.com/sirupsen/logrus"
+
 	"sync"
 	"syscall"
+
+	topics "github.com/Cray-HPE/hms-trs-operator/v2/pkg/kafka_topics"
 )
 
 var wk Worker
@@ -173,7 +174,6 @@ func main() {
 	}
 	wk.waitGroup.Add(1)
 
-
 	// Main PULLOFF Kafka Func
 	go func() {
 		defer wk.waitGroup.Done()
@@ -182,7 +182,6 @@ func main() {
 			select {
 			//This was a MAJOR PAIN!!! : https://stackoverflow.com/questions/3398490/checking-if-a-channel-has-a-ready-to-read-value-using-go
 			case consumerMessage, ok := <-wk.kafkaRspChan:
-
 
 				if ok {
 					raw := consumerMessage.Value

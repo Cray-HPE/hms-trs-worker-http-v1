@@ -6,9 +6,9 @@ github.com/Cray-HPE/hms-trs-app-api/v2/pkg/trs_http_api
 # github.com/Cray-HPE/hms-trs-kafkalib/v2 v2.0.1
 ## explicit
 github.com/Cray-HPE/hms-trs-kafkalib/v2/pkg/trs-kafkalib
-# github.com/Cray-HPE/hms-trs-operator v1.7.0
+# github.com/Cray-HPE/hms-trs-operator/v2 v2.0.2
 ## explicit
-github.com/Cray-HPE/hms-trs-operator/pkg/kafka_topics
+github.com/Cray-HPE/hms-trs-operator/v2/pkg/kafka_topics
 # github.com/confluentinc/confluent-kafka-go v1.8.2
 ## explicit
 github.com/confluentinc/confluent-kafka-go/kafka
