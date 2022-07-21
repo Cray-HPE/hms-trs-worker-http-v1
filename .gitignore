@@ -3,3 +3,11 @@ repos/
 go_build_worker
 go_run_worker*
 configs/active_topics.json
+
+# Prevent certificates from getting checked in
+*.ca
+*.cer
+*.crt
+*.csr
+*.key
+*.pem
