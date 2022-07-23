@@ -28,6 +28,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.testing
+      network: host
     hostname: worker
     environment:
       - LOG_LEVEL=TRACE
@@ -35,9 +36,7 @@ services:
     depends_on:
       - kafka
   integration:
-    build:
-      context: repos/hms-trs-app-api
-      dockerfile: Dockerfile.integration
+    image: hms-trs-app-api:2.0.0
     hostname: integration
     environment:
       - LOG_LEVEL=TRACE
@@ -45,3 +44,6 @@ services:
       - IMPLEMENTATION=REMOTE
     depends_on:
       - worker
+    command: ./bin/testApp
+    environment:
+      - CHAN=true
