@@ -1,4 +1,5 @@
 .idea/
+*.swp
 repos/
 go_build_worker
 go_run_worker*
