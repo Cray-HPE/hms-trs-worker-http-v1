@@ -36,7 +36,7 @@ services:
     depends_on:
       - kafka
   integration:
-    image: artifactory.algol60.net/csm-docker/unstable/hms-trs-test-app:2.1.0-20220726134231.8d185f4
+    image: artifactory.algol60.net/csm-docker/unstable/hms-trs-app-api-testapp:2.1.0-20220728160543.b2f7f23
     hostname: integration
     environment:
       - LOG_LEVEL=TRACE
