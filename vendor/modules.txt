@@ -21,10 +21,11 @@ github.com/google/uuid
 github.com/hashicorp/go-cleanhttp
 # github.com/hashicorp/go-retryablehttp v0.6.4
 github.com/hashicorp/go-retryablehttp
-# github.com/sirupsen/logrus v1.8.1
+# github.com/sirupsen/logrus v1.8.3
 ## explicit
 github.com/sirupsen/logrus
-# golang.org/x/sys v0.0.0-20191028164358-195ce5e7f934
+# golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8
+golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
 golang.org/x/sys/windows
 # k8s.io/api => k8s.io/api v0.0.0-20191016110408-35e52d86657a

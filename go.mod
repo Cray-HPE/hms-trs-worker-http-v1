@@ -36,5 +36,5 @@ require (
 	github.com/Cray-HPE/hms-trs-kafkalib/v2 v2.0.1
 	github.com/Cray-HPE/hms-trs-operator v1.7.0
 	github.com/confluentinc/confluent-kafka-go v1.8.2
-	github.com/sirupsen/logrus v1.8.1
+	github.com/sirupsen/logrus v1.8.3
 )
